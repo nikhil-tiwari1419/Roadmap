@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Menu } from 'lucide-react'
 import { useTheme } from '../Context/Theme'
+import { Sun, Moon } from 'lucide-react'
 function Navbar() {
     const [open, setOpen] = useState(false)
 
@@ -12,8 +13,9 @@ function Navbar() {
         { path: "/Devops", label: "DevOps" },
         { path: "/Dsa", label: "DSA" },
         { path: "/AI", label: "AI" },
+        { path: "/Git", label: "Git" },
     ]
-    const  {theme, toggleTheme} = useTheme();
+    const { theme, toggleTheme } = useTheme();
     return (
         // ✅ FULL WIDTH NAVBAR
         <header className="fixed bg-color top-0 inset-x-0 bg-white shadow-md z-50">
@@ -47,14 +49,14 @@ function Navbar() {
 
                 {/* Mobile Button */}
                 <button
-                    className="md:hidden"
+                    className="md:hidden cursor-pointer"
                     onClick={() => setOpen(!open)}
                 >
                     <Menu className="" strokeWidth={2.25} />
                 </button>
                 <button onClick={toggleTheme}
-                className=''> 
-                {theme=== "light"? "🌙Dark Mode":"☀️ Light Mode"}
+                    className='cursor-pointer'>
+                    {theme === "light" ? <Moon /> : <Sun />}
 
                 </button>
             </div>

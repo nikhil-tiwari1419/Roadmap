@@ -1,12 +1,16 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 function Dsa() {
   return (
-    <div className='bg-gray-200 min-h-screen mx-auto max-w-7xl '>
+    <>
   <Navbar/>
+    <div className='bg-color min-h-screen mx-auto px-4 pt-20 max-w-7xl '>
   <p className='text-black'> Hell o from Dsa team </p>
+    <Footer/>
     </div>
+    </>
   )
 }
 

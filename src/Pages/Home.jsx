@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Undo2, SquareArrowOutUpRight } from 'lucide-react';
 import Navbar from '../Components/Navbar'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Components/Footer';
 
 
 function Home() {
@@ -39,6 +40,12 @@ function Home() {
       description: "AI enables machines to think, learn, and make decisions.It includes machine learning, deep learning, and neural networks.Used in chatbots, recommendations, vision, and automation.",
       url1: "AI",
     },
+    {
+      title: "Git",
+      Link: "/Git",
+      description: "⬇️ Git is a version control system used to track code changes.It helps developers work together and roll back mistakes.Works locally on your system.⬇️ GitHub is a cloud platform to store and share Git repositories.It enables collaboration using pull requests, issues, and reviews.Used for teamwork, open source, and project hosting.",
+      url1: "Git",
+    }
   ]
 
   const [ActivePOPup, setActivePOPup] = useState(null);
@@ -48,7 +55,7 @@ function Home() {
       <Navbar />
       <div
         className='bg-color min-h-screen pt-20 px-4  mx-auto max-w-7xl'
-      >
+      >  <h2 className='text-center font-bold sm:text-2xl '>Home</h2>
         <div
           className="
         grid 
@@ -65,8 +72,8 @@ function Home() {
               </h1>
 
 
-              <p className='text-sm '>{item.description}</p>
-              <div className='border border-orange-300   rounded underline '>
+              <p className='text-sm font-bold'>{item.description}</p>
+              <div className='border border-red-300   rounded underline '>
                 <h2
                   onClick={() => setActivePOPup(item.url1)}
                   className='cursor-pointer font-bold p-2 hover:text-blue-500'>{item.url1}</h2>
@@ -99,11 +106,16 @@ function Home() {
                 <Undo2 />
               </button>
               <h2 className='font-bold border-b-2 text-blue-400 text-lg'> {ActivePOPup}</h2>
-              <p className='text-lg text-violet-400 font-bold'>
+              <p className='text-lg text-violet-400 '>
                 {/* FullStack */}
                 {ActivePOPup === "Frontend" && ("HTML , CSS , JavaScript , React[CSR](Componrnt , rendering , context , children , Effects , Hooks , Jsx , State , props , kyes , Fragements , Event) , ReduxTol , Tailwindcss (UI) , NextJs[SSR](better SEO) , TypeScript(SSR)")}
                 {ActivePOPup === "Backend" && " Node.js , Spring-boot , FastAPi , Bun.js , Express, APIs :- (REST  ,  SOAP , gRPC , WebSoket , WebRtc , GraphQL , WebHooks), Authentiction / Authorization :-(jWt , SSO ,Access vs refresh , Bearer , Basic base64)"}
-                {ActivePOPup === "DataBase" && "Relational(SQL)[MySql , PostgreSQL , Oracel , SQL Server , MariaDB , SQlite ] NoSQL[Mongo DB , REdis , CouchDB ,Firebase] "}
+                {ActivePOPup === "DataBase" && (
+                  <>
+                    <li>Relational(SQL):--[ MySql , PostgreSQL , Oracel , SQL Server , MariaDB , SQlite ]</li>
+                    <li>NoSQL:--[ Mongo DB , REdis , CouchDB ,Firebase ] </li>
+                  </>
+                )}
                 {ActivePOPup === "Deployment" && "Docker, CI/CD, Cloud , Vercel , Render , Railway , netlify"}
                 {/* DSA */}
                 {ActivePOPup === "DSA" && (
@@ -180,10 +192,27 @@ function Home() {
                   </>
 
                 )}
+                {/* Git hub */}
+                {ActivePOPup === "Git" && (
+                  <>
+                    <li>Basic</li>
+                    <li>Fundamental command </li>
+                    <li>working with branches</li>
+                    <li>Remote Repositories</li>
+                    <li>Undoing Changes</li>
+                    <li>Advanced Git Concept</li>
+                    <li>Collaboration workflow</li>
+                    <li>Git Internals</li>
+                    <li>Git Best Practices</li>
+                    <li>GUI Tools and git Hosting</li>
+                    <li>Register for National Skillup</li>
+                  </>
+                )}
               </p>
             </div>
           </div>
         )}
+        <Footer/>
       </div>
 
     </>
