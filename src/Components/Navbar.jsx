@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Menu } from 'lucide-react'
 import { useTheme } from '../Context/Theme'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon , Menu } from 'lucide-react';
 function Navbar() {
     const [open, setOpen] = useState(false)
 
