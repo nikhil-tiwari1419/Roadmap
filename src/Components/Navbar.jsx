@@ -29,9 +29,9 @@ function Navbar() {
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
                 {/* Logo */}
-                <h1 className="text-lg sm:text-3xl font-bold">
-                    <span className="text-blue-600">Road</span>
-                    <span>Map</span>
+                <h1 className="text-lg sm:text-3xl ">
+                    <span className="text-blue-600 font-bold">Road</span>
+                    <span className='font-bold'>Map</span>
                 </h1>
 
                 {/* Desktop Menu */}
