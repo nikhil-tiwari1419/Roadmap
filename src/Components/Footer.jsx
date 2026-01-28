@@ -3,7 +3,7 @@ import { Linkedin } from 'lucide-react';
 
 function Footer() {
   return (
-    <div className='flex border bg-color my-3  p-2 rounded bg-gray-300'>
+    <div className='flex border  my-3  p-2 rounded'>
       <footer>
         <a
           className='flex gap-3'

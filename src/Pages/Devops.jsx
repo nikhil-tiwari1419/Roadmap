@@ -5,7 +5,7 @@ function Devops() {
   return (
     <>
       <Navbar/>
-    <div className='bg-color min-h-screen mx-auto max-w-7xl pt-20 px-4'>
+    <div className='bg min-h-screen mx-auto max-w-7xl pt-20 px-4'>
       <p className='text-black'>Wellcome form Devops team</p>
     <Footer/>
     </div>

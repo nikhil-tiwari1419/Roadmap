@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../Context/Theme'
-import { Sun, Moon , Menu } from 'lucide-react';
+import { Sun, Moon, Menu } from 'lucide-react';
 function Navbar() {
     const [open, setOpen] = useState(false)
+    const { theme, toggleTheme } = useTheme();
 
     const links = [
         { path: "/Home", label: "Home" },
@@ -14,16 +15,21 @@ function Navbar() {
         { path: "/AI", label: "AI" },
         { path: "/Git", label: "Git" },
     ]
-    const { theme, toggleTheme } = useTheme();
     return (
         // ✅ FULL WIDTH NAVBAR
-        <header className="fixed bg-color top-0 inset-x-0 bg-white shadow-md z-50">
+        <header
+            className="fixed top-0 inset-x-0 shadow-md z-50 border-b"
+            style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)"
+            }}
+        >
 
             {/* ✅ Centered content */}
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
                 {/* Logo */}
-                <h1 className="flex text-lg sm:text-3xl font-bold">
+                <h1 className="text-lg sm:text-3xl font-bold">
                     <span className="text-blue-600">Road</span>
                     <span>Map</span>
                 </h1>
@@ -47,22 +53,27 @@ function Navbar() {
                 </nav>
 
                 {/* Mobile Button */}
-                <button
-                    className="md:hidden cursor-pointer"
-                    onClick={() => setOpen(!open)}
-                >
-                    <Menu className="" strokeWidth={2.25} />
-                </button>
-                <button onClick={toggleTheme}
-                    className='cursor-pointer'>
-                    {theme === "light" ? <Moon /> : <Sun />}
+                <div className='flex item-center gap-3'>
+                    <button onClick={toggleTheme}
+                        className='cursor-pointer'>
+                        {theme === "light" ? <Moon /> : <Sun />}
 
-                </button>
+                    </button>
+                    <button
+                        className='md:hidden cursor-pointer'
+                        onClick={() => setOpen(!open)}
+                    >
+                        <Menu />
+                    </button>
+                </div>
             </div>
 
             {/*  Mobile Menu – FULL WIDTH */}
             {open && (
-                <div className="md:hidden w-full bg-color border-t">
+                <div
+                    className="md:hidden border-t"
+                    style={{ backgroundColor: "var(--bg-color)" }}
+                >
                     <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
                         {links.map(item => (
                             <NavLink

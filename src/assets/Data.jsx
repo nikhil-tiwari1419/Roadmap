@@ -1,112 +1,16 @@
-import React, { useState } from 'react'
-import { Undo2, SquareArrowOutUpRight } from 'lucide-react'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
-import { useNavigate } from 'react-router-dom'
-
-function Home() {
-  const navigate = useNavigate()
+import React from 'react'
   const [activePopup, setActivePopup] = useState(null)
 
-  const roadmapData = [
-    {
-      title: "Fullstack",
-      link: "/FullStack",
-      description:
-        "Frontend, Backend, Database, Deployment are the main pillars of Fullstack development",
-      sections: ["Frontend", "Backend", "DataBase", "Deployment"],
-    },
-    {
-      title: "Data Structures & Algorithms",
-      link: "/Dsa",
-      description:
-        "DSA helps you write optimized code and is essential for interviews.",
-      sections: ["DSA"],
-    },
-    {
-      title: "Web3",
-      link: "/Web3",
-      description:
-        "Decentralized web using blockchain, smart contracts, and dApps.",
-      sections: ["Web3"],
-    },
-    {
-      title: "DevOps",
-      link: "/Devops",
-      description:
-        "Automates build, test, deploy with CI/CD and cloud infrastructure.",
-      sections: ["DevOps"],
-    },
-    {
-      title: "AI",
-      link: "/AI",
-      description:
-        "AI enables machines to learn, reason, and automate tasks.",
-      sections: ["AI"],
-    },
-    {
-      title: "Git",
-      link: "/Git",
-      description:
-        "Git for version control and GitHub for collaboration.",
-      sections: ["Git"],
-    },
-  ]
-
-  return (
-    <>
-      <Navbar />
-
-      <div className="bg min-h-screen pb-3 pt-20 px-4 mx-auto max-w-7xl">
-        <h2 className="text-center font-bold text-2xl mb-6">Home</h2>
-
-        {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {roadmapData.map((item) => (
-            <div
-              key={item.title}
-              className="border-2 border-blue-400 rounded-lg p-6 hover:shadow-md transition"
-            >
-              <h1 className="text-xl font-semibold underline mb-2">
-                {item.title}
-              </h1>
-
-              <p className="text-sm font-bold mb-3">
-                {item.description}
-              </p>
-
-              <div className="border rounded">
-                {item.sections.map((sec) => (
-                  <h2
-                    key={sec}
-                    onClick={() => setActivePopup(sec)}
-                    className="cursor-pointer font-bold p-2 hover:text-blue-500"
-                  >
-                    {sec}
-                  </h2>
-                ))}
-
-                <div
-                  onClick={() => navigate(item.link)}
-                  className="cursor-pointer flex items-center gap-2 p-2 hover:text-blue-500"
-                >
-                  <SquareArrowOutUpRight size={18} />
-                  Visit
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* POPUP */}
-        {activePopup && (
+function Data() {
+    return (
+        <div>
+            {activePopup && (
           <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
-
           >
-            <div className="font-bold text-xl  rounded-lg p-6 w-[90%] max-w-md relative">
+            <div className="bg-white dark:bg-slate-900 rounded-lg p-6 w-[90%] max-w-md relative">
               <button
                 onClick={() => setActivePopup(null)}
-                className="absolute cursor-pointer top-3 right-3"
+                className="absolute top-3 right-3"
               >
                 <Undo2 />
               </button>
@@ -227,7 +131,7 @@ function Home() {
 
                 {activePopup === "DSA" && (
                   <>
-                    <li>introduction to c++</li>
+                    <li>tntroduction to c++</li>
                     <li>Loops and Pattern Printing </li>
                     <li>Arrays / 2D Array</li>
                     <li>Strings</li>
@@ -277,10 +181,8 @@ function Home() {
             </div>
           </div>
         )}
-        <Footer />
-      </div>
-    </>
-  )
+        </div>
+    )
 }
 
-export default Home
+export default Data

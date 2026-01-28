@@ -149,15 +149,15 @@ function FullStack() {
     <>
       <Navbar />
       <div
-        className='bg-color min-h-screen mx-auto max-w-7xl pt-20 px-4 '
+        className='bg min-h-screen mx-auto max-w-7xl pb-3 pt-20 px-4 '
       >
-        <div className='border-blue-300 border-2 sm:mx-20 rounded text-center font-bold sm:text-2xl text-lg '>
-          <h2>FullStack</h2>
+                  <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
+        <div className='border-blue-400 border-2 sm:mx-20 rounded text-center font-bold sm:text-2xl text-lg '>
           {Topic.map((item) => (
             <div
               key={item.topic}
-              className='border border-violet-400 rounded items-center m-3 px-2 sm:mx-13 text-lg sm:text-2xl'>
-              <h1 className='hover:text-indigo-400 flex'>{item.topic}  </h1>
+              className='border border-gray-400 rounded items-center m-3 px-2 sm:mx-13 text-lg sm:text-2xl'>
+              <h1 className='flex'>{item.topic}  </h1>
 
               <ul className='pl-6 mt-2 text-base sm:text-lg'>
                 {item.links.map((link, index) => (

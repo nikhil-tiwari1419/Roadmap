@@ -6,7 +6,7 @@ function Dsa() {
   return (
     <>
   <Navbar/>
-    <div className='bg-color min-h-screen mx-auto px-4 pt-20 max-w-7xl '>
+    <div className='bg min-h-screen mx-auto px-4 pt-20 max-w-7xl '>
   <p className='text-black'> Hell o from Dsa team </p>
     <Footer/>
     </div>
