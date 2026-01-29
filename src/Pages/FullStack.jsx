@@ -180,7 +180,7 @@ function FullStack() {
         {/* QnA */}
         <h1 className='font-bold text-xl text-center pt-3'>QnA section</h1>
         <div
-          className='border p-1 h-90 rounded border-none overflow-auto'
+          className='border p-1 h-90 rounded border-none overflow-auto no-scrollbar'
         >
 
           <QnA />

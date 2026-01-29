@@ -21,7 +21,7 @@
   background-image:
     linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-size: 12px 12px;
   color: var(--text-color); 
 }
 
@@ -52,4 +52,8 @@ a {
 
 a:hover {
   color: #c6bbf9;
+}
+.no-scrollbar{
+    scrollbar-width: thin;
+  scrollbar-color: #88888800 transparent;
 }
