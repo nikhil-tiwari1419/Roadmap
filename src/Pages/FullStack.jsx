@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import { Youtube } from 'lucide-react';
+import QnA from '../assets/QnA'
 
 function FullStack() {
+
   const Topic = [
     {
       topic: "HTML / CSS",
@@ -69,7 +70,10 @@ function FullStack() {
           {
             label: "MongoDB Code with Harry",
             url: "https://youtu.be/M1dKYQ7GsTg?si=kp0hWH9jynXGa9KL",
-          }
+          }, {
+            label: "MySQL playlist (Traived Official) ",
+            url: "https://youtube.com/playlist?list=PL-pnFFAm42szbYLIAB3pc4Dnmfc9EHhR5&si=7z7dd-Ocit-ejzn5",
+          },
         ]
     },
     {
@@ -81,9 +85,6 @@ function FullStack() {
         }, {
           label: "Prisama and MongoDB (Hitesh Choudhary)",
           url: "https://www.youtube.com/live/IiqhMNPWGEs?si=HcOEhXKTitY-RouY",
-        }, {
-          label: "MySQL playlist (Traived Official) ",
-          url: "https://youtube.com/playlist?list=PL-pnFFAm42szbYLIAB3pc4Dnmfc9EHhR5&si=7z7dd-Ocit-ejzn5",
         }, {
           label: "PostgresSQL (Mprashnat TECH)",
           url: "https://youtu.be/cnzka7kF5Zk?si=pgKLi2PaVLyPb_u3"
@@ -151,7 +152,7 @@ function FullStack() {
       <div
         className='bg min-h-screen mx-auto max-w-7xl pb-3 pt-20 px-4 '
       >
-                  <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
+        <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
         <div className='border-blue-400 border-2 sm:mx-20 rounded text-center font-bold sm:text-2xl text-lg '>
           {Topic.map((item) => (
             <div
@@ -162,7 +163,8 @@ function FullStack() {
               <ul className='pl-6 mt-2 text-base sm:text-lg'>
                 {item.links.map((link, index) => (
                   <li key={index}>
-                    <Youtube strokeWidth={1.25} />
+                    {/* <Youtube /> */}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" /></svg>
                     <a href={link.url}
                       target='_blank'
                       rel='noopener noreferrer'
@@ -175,6 +177,21 @@ function FullStack() {
             </div>
           ))}
         </div>
+        {/* QnA */}
+        <h1 className='font-bold text-xl text-center pt-3'>QnA section</h1>
+        <div
+          className='border p-1 h-90 rounded border-none overflow-auto'
+        >
+
+          <QnA />
+        </div>
+
+        <p className='px-1 rounded text-blue-500 mt-10 font-mono'>
+          <strong>👏“In the beginning, practice more and depend less on AI.
+            Build logic with your own hands.
+            Once you understand the <span className='underline underline-offset-4 text-red-400'> ‘why’</span>, use AI to speed up the <span className='text-red-400 underline underline-offset-4'>‘how’</span>.”</strong>
+        </p>
+
         <Footer />
       </div>
     </>
