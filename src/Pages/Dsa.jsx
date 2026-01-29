@@ -5,6 +5,20 @@ import Footer from '../Components/Footer'
 function Dsa() {
   const ListOfTopics = [
     {
+      topic: "Introduction to C++",
+      subTopics: [
+        "Basic syntax",
+        "Input / Output",
+        "STL basics",
+        "Vectors, maps, sets"
+      ],
+      resource: [
+        { pdf: "" },
+        { video: "" },
+        { practic: "" },
+      ]
+    },
+    {
       topic: "Loops and Pattern Printing",
       subTopics: [
         "for, while, do-while loops",
@@ -261,20 +275,7 @@ function Dsa() {
         { practic: "" },
       ]
     },
-    {
-      topic: "Introduction to C++",
-      subTopics: [
-        "Basic syntax",
-        "Input / Output",
-        "STL basics",
-        "Vectors, maps, sets"
-      ],
-      resource: [
-        { pdf: "" },
-        { video: "" },
-        { practic: "" },
-      ]
-    }
+    
   ];
 
   return (

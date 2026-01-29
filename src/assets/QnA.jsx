@@ -120,7 +120,7 @@ function QnA() {
                         onClick={() => handdeltoggle(idx)}
                         className='cursor-pointer font-semibold flex justify-between'
                     >
-                        {item.question}
+                        {idx + 1}.{item.question}
                         <span>{openIndex === idx ? <FolderOpen /> : <FolderClosed />}</span>
                     </div>
                     {openIndex === idx && (

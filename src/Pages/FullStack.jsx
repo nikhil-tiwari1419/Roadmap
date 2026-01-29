@@ -153,7 +153,10 @@ function FullStack() {
         className='bg min-h-screen mx-auto max-w-7xl pb-3 pt-20 px-4 '
       >
         <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
-        <div className='border-blue-400 border-2 sm:mx-20 rounded text-center font-bold sm:text-2xl text-lg '>
+        <h1 className='underline underline-offset-4 text-sm m-3'> <span className='text-2xl text-red-600'>*</span> 
+          Note: If u wnat to become a good developer , Start reading document's and understand the concept 
+        </h1>
+        <div className='border-blue-400 border-2  rounded text-center font-bold sm:text-2xl text-lg '>
           {Topic.map((item) => (
             <div
               key={item.topic}
@@ -180,7 +183,7 @@ function FullStack() {
         {/* QnA */}
         <h1 className='font-bold text-xl text-center pt-3'>QnA section</h1>
         <div
-          className='border p-1 h-90 rounded border-none overflow-auto no-scrollbar'
+          className='border-t-red-300 border-b-red-300 border-t-3 border-b-3 p-2 h-90 rounded-2xl  overflow-auto no-scrollbar'
         >
 
           <QnA />

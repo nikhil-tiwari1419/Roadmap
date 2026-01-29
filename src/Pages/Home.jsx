@@ -136,7 +136,7 @@ function Home() {
                           <li>Context API</li>
                           <li>Children</li>
                           <li>Effects</li>
-                          <li>Hooks</li>
+                          <li>Hooks (useState,UseEffect,useRef,useContext,useMemo,useCallbac,useReducer ) </li>
                           <li>JSX</li>
                           <li>State</li>
                           <li>Props</li>
