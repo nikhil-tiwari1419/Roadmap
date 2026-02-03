@@ -103,7 +103,7 @@ function Home() {
           <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
 
           >
-            <div className="font-bold text-xl  rounded-lg p-6 w-[90%] max-w-md relative">
+            <div className="font-bold text-xl border overflow-x-auto rounded-lg p-6  max-w-md relative">
               <button
                 onClick={() => setActivePopup(null)}
                 className="absolute cursor-pointer top-3 right-3"
@@ -131,18 +131,18 @@ function Home() {
                       <li>
                         <strong>React (CSR – Client Side Rendering)</strong>
                         <ul className="list-circle pl-5 mt-1">
-                          <li>Components</li>
-                          <li>Rendering</li>
-                          <li>Context API</li>
-                          <li>Children</li>
-                          <li>Effects</li>
-                          <li>Hooks (useState,UseEffect,useRef,useContext,useMemo,useCallbac,useReducer ) </li>
-                          <li>JSX</li>
-                          <li>State</li>
-                          <li>Props</li>
-                          <li>Keys</li>
-                          <li>Fragments</li>
-                          <li>Events</li>
+                          <li>🔻Components</li>
+                          <li>🔻Rendering</li>
+                          <li>🔻Context API</li>
+                          <li>🔻Children</li>
+                          <li>🔻Effects</li>
+                          <li>🔻Hooks (useState,UseEffect,useRef, <br /> useContext,useMemo,useCallbac,useReducer ) </li>
+                          <li>🔻JSX</li>
+                          <li>🔻State</li>
+                          <li>🔻Props</li>
+                          <li>🔻Keys</li>
+                          <li>🔻Fragments</li>
+                          <li>🔻Events</li>
                         </ul>
                       </li>
 
