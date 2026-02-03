@@ -58,11 +58,11 @@ function FullStack() {
           url: "https://expressjs.com/en/guide/routing.html"
         }
       ]
-    },{
-      topic:"Complet Backend for biggner",
-      links:[{
-        label:"Node Js + Express + Db + Rest API ",
-        links:"https://youtu.be/0IciwnJ6PJI?si=Y9DAurp6KLkJ4lG5",
+    }, {
+      topic: "Complet Backend for biggner",
+      links: [{
+        label: "Node Js + Express + Db + Rest API ",
+        url: "https://youtu.be/0IciwnJ6PJI?si=Y9DAurp6KLkJ4lG5",
       }
       ]
     },
@@ -125,9 +125,9 @@ function FullStack() {
 
           label: "ReduxTool kit ",
           url: "https://youtu.be/Q5TqsetwCoE?si=0_rHF88TjW_8msXx",
-        },{
-          label:"Tailwind Css Complet responsivenes website",
-          url:"https://youtu.be/J_r6hBo9lO4?si=flmu6cdl9ag7Qfy2",
+        }, {
+          label: "Tailwind Css Complet responsivenes website",
+          url: "https://youtu.be/J_r6hBo9lO4?si=flmu6cdl9ag7Qfy2",
         }
       ]
     },
@@ -154,11 +154,11 @@ function FullStack() {
       ]
     },
     {
-      topic:"Automation [ N8N ]",
-      links:[
+      topic: "Automation [ N8N ]",
+      links: [
         {
-          label:"n8n tutorial (Sheriyans codeing school)",
-          url:"https://youtu.be/vkI8BdsLcXg?si=rF7D-Uuj6z2N0vGc",
+          label: "n8n tutorial (Sheriyans codeing school)",
+          url: "https://youtu.be/vkI8BdsLcXg?si=rF7D-Uuj6z2N0vGc",
         }
       ]
     }
@@ -172,8 +172,8 @@ function FullStack() {
         className='bg min-h-screen mx-auto max-w-7xl pb-3 pt-20 px-4 '
       >
         <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
-        <h1 className='underline underline-offset-4 text-sm m-3'> <span className='text-2xl text-red-600'>*</span> 
-          Note: If u wnat to become a good developer , Start reading documentation's and understand the concept 
+        <h1 className='underline underline-offset-4 text-sm m-3'> <span className='text-2xl text-red-600'>*</span>
+          Note: If u wnat to become a good developer , Start reading documentation's and understand the concept
         </h1>
         <div className='border-blue-400 border-2  rounded text-center font-bold sm:text-2xl text-lg '>
           {Topic.map((item) => (
