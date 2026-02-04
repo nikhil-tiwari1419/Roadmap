@@ -63,6 +63,13 @@ function FullStack() {
       links: [{
         label: "Node Js + Express + Db + Rest API ",
         url: "https://youtu.be/0IciwnJ6PJI?si=Y9DAurp6KLkJ4lG5",
+      },
+      {
+        label:"Authentication Tyoes nd techniques",
+        url:"https://medium.com/@alyragab70/authentication-types-and-techniques-eb8232eebcfb",
+      },{
+        label:"REST API Mastery →From Basics to Production",
+        url:"https://medium.com/@decodinggtech/rest-api-mastery-from-basics-to-production-4510fbf247fd",
       }
       ]
     },
