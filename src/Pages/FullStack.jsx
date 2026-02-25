@@ -177,13 +177,13 @@ function FullStack() {
     <>
       <Navbar />
       <div
-        className={`'grid-bg min-h-screen pb-3 pt-20 px-4 ${theme === 'dark'? "bg-gray-800":"grid-bg text-black"}`}
+        className={`'grid-bg min-h-screen pb-3 pt-20 px-4 ${theme === 'dark' ? "bg-gray-900 text-white" : "grid-bg text-black"}`}
       >
-        <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
-        <h1 className='underline underline-offset-4 text-sm m-3 text-center'> <span className='text-2xl text-red-600 '>*</span>
+        <h2 className="text-center font-bold text-2xl mb-3">FullStack</h2>
+        <h1 className='underline underline-offset-4 text-sm  text-center'> <span className='text-2xl text-red-600 '>*</span>
           Note: If u wnat to become a good developer , Start reading documentation's and understand the concept
         </h1>
-        <div className='border-blue-400 border-2 mx-auto max-w-7xl rounded text-center font-bold  sm:text-2xl text-lg '>
+        <div className='border-blue-400 border-2 mx-auto max-w-7xl rounded text-center font-bold  sm:text-2xl text-lg  grid grid-cols-1 md:grid-cols-2'>
           {Topic.map((item) => (
             <div
               key={item.topic}

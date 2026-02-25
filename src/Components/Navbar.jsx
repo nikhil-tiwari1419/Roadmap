@@ -59,10 +59,10 @@ function Navbar() {
                         onClick={toggleTheme}
                         className={`cursor-pointer p-2 rounded-lg transition-colors
                             ${theme === 'dark'
-                                ? 'text-yellow-400 hover:bg-gray-700'   // sun icon in dark
-                                : 'text-gray-700 hover:bg-blue-50'}`}   // moon icon in light
+                                ? 'text-yellow-400 border  hover:bg-gray-700'   // sun icon in dark
+                                : 'text-gray-700 border hover:bg-blue-50'}`}   // moon icon in light
                     >
-                        {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}  {/* ❌ was themes and logic was flipped */}
+                        {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}  
                     </button>
 
                     <button

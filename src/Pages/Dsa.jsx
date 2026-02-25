@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import { useTheme } from '../Context/Theme';
 
 function Dsa() {
+  const { theme }= useTheme();
   const ListOfTopics = [
     {
       topic: "Introduction to C++",
@@ -281,7 +283,7 @@ function Dsa() {
   return (
     <>
       <Navbar />
-      <div className='bg min-h-screen  px-4 pt-20  pb-3'>
+      <div className={`' min-h-screen  px-4 pt-20  pb-3 ${theme === 'dark'? "bg-gray-900 text-white":"grid-bg text-black"}`}>
         <h1 className='text-center font-bold text-2xl mb-6'>Data Structure & Algorithum</h1>
         <div className='mx-auto
 max-w-7xl '>
