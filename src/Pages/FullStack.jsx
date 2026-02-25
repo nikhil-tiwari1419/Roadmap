@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import QnA from '../assets/QnA'
+import { useTheme } from '../Context/Theme'
 
 function FullStack() {
-
+  const { theme } = useTheme();
   const Topic = [
     {
       topic: "HTML / CSS",
@@ -65,11 +66,11 @@ function FullStack() {
         url: "https://youtu.be/0IciwnJ6PJI?si=Y9DAurp6KLkJ4lG5",
       },
       {
-        label:"Authentication Tyoes nd techniques",
-        url:"https://medium.com/@alyragab70/authentication-types-and-techniques-eb8232eebcfb",
-      },{
-        label:"REST API Mastery →From Basics to Production",
-        url:"https://medium.com/@decodinggtech/rest-api-mastery-from-basics-to-production-4510fbf247fd",
+        label: "Authentication Tyoes nd techniques",
+        url: "https://medium.com/@alyragab70/authentication-types-and-techniques-eb8232eebcfb",
+      }, {
+        label: "REST API Mastery →From Basics to Production",
+        url: "https://medium.com/@decodinggtech/rest-api-mastery-from-basics-to-production-4510fbf247fd",
       }
       ]
     },
@@ -176,17 +177,17 @@ function FullStack() {
     <>
       <Navbar />
       <div
-        className='bg min-h-screen mx-auto max-w-7xl pb-3 pt-20 px-4 '
+        className={`'grid-bg min-h-screen pb-3 pt-20 px-4 ${theme === 'dark'? "bg-gray-800":"grid-bg text-black"}`}
       >
         <h2 className="text-center font-bold text-2xl mb-6">FullStack</h2>
-        <h1 className='underline underline-offset-4 text-sm m-3'> <span className='text-2xl text-red-600'>*</span>
+        <h1 className='underline underline-offset-4 text-sm m-3 text-center'> <span className='text-2xl text-red-600 '>*</span>
           Note: If u wnat to become a good developer , Start reading documentation's and understand the concept
         </h1>
-        <div className='border-blue-400 border-2  rounded text-center font-bold sm:text-2xl text-lg '>
+        <div className='border-blue-400 border-2 mx-auto max-w-7xl rounded text-center font-bold  sm:text-2xl text-lg '>
           {Topic.map((item) => (
             <div
               key={item.topic}
-              className='border border-gray-400 rounded items-center m-3 px-2 sm:mx-13 text-lg sm:text-2xl'>
+              className='border-2 py-5 border-dashed border-gray-400 rounded items-center m-3 px-2 sm:mx-13 text-lg sm:text-2xl'>
               <h1 className='flex'>{item.topic}  </h1>
 
               <ul className='pl-6 mt-2 text-base sm:text-lg'>
@@ -209,13 +210,13 @@ function FullStack() {
         {/* QnA */}
         <h1 className='font-bold text-xl text-center pt-3'>QnA section</h1>
         <div
-          className='border-t-red-300 border-b-red-300 border-t-3 border-b-3 p-2 h-90 rounded-2xl  overflow-auto no-scrollbar'
+          className='border-t-blue-300 border-t-3 border-l-blue-300 border-l-3 border-b-green-300 border-b-3 border-r-green-300  border-r-3  p-2 h-90 rounded mx-auto max-w-7xl  overflow-auto no-scrollbar'
         >
 
           <QnA />
         </div>
 
-        <p className='px-1 rounded text-blue-500 mt-10 font-mono'>
+        <p className='px-1 rounded text-blue-500 mt-10 font-mono text-center'>
           <strong>👏“In the beginning, practice more and depend less on AI.
             Build logic with your own hands.
             Once you understand the <span className='underline underline-offset-4 text-red-400'> ‘why’</span>, use AI to speed up the <span className='text-red-400 underline underline-offset-4'>‘how’</span>.”</strong>

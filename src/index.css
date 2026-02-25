@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-[data-theme="light"] {
+/* [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #1f2937;
   --heading-color: #111827;
@@ -13,9 +13,9 @@
   --heading-color: #f9fafb;
   --grid-color: rgba(255, 255, 255, 0.06);
 }
+*/
 
-
-.bg {
+/* .bg {
   min-height: 100vh;
   background-color: var(--bg-color);
   background-image:
@@ -23,7 +23,27 @@
     linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 12px 12px;
   color: var(--text-color); 
+}   */ 
+
+
+@layer components {
+  .grid-bg {
+    min-height: 100vh;
+    /* background-color: #f0f4ff; */
+    background-image:
+      linear-gradient(to right, #3b82f620 1px, transparent 1px),
+      linear-gradient(to bottom, #3b82f620 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .dark .grid-bg {
+    background-color: #0f172a;
+    background-image:
+      linear-gradient(to right, #3b82f630 1px, transparent 1px),
+      linear-gradient(to bottom, #3b82f630 1px, transparent 1px);
+  }
 }
+
 
 body{
   background: whitesmoke;

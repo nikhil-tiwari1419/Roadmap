@@ -114,7 +114,7 @@ function QnA() {
             {qnaList.map((item, idx) => (
                 <div
                     key={idx}
-                    className='rounded mb-2 border-2 mt-4 p-3'
+                    className='rounded mb-2 border-2 mt-4 p-3 mx-auto max-w-7xl'
                 >
                     <div
                         onClick={() => handdeltoggle(idx)}

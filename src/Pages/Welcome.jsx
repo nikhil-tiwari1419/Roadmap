@@ -7,8 +7,7 @@ function Welcome() {
 
   return (
     <div
-      className=' bg min-h-screen mx-auto max-w-7xl items-center flex-col flex '
-
+      className=' bg min-h-screen mx-auto items-center flex-col flex '
     >
       <div className='flex-1 flex items-center justify-center'>
         <div className=' p-10 rounded-lg shadow-lg gap-6 items-center flex flex-col'>

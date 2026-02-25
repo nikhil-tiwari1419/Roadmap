@@ -275,15 +275,16 @@ function Dsa() {
         { practic: "" },
       ]
     },
-    
+
   ];
 
   return (
     <>
       <Navbar />
-      <div className='bg min-h-screen mx-auto px-4 pt-20 max-w-7xl pb-3'>
+      <div className='bg min-h-screen  px-4 pt-20  pb-3'>
         <h1 className='text-center font-bold text-2xl mb-6'>Data Structure & Algorithum</h1>
-        <div className=' '>
+        <div className='mx-auto
+max-w-7xl '>
           {ListOfTopics.map((item, index) => (
             <div
               key={index}
@@ -323,8 +324,8 @@ function Dsa() {
           ))}
         </div>
         <div className='font-mono px-10 my-5 sm:text-2xl text-lg'>
-<p>“DSA is not about memorizing solutions.
-It’s about training your brain to think better.”</p>
+          <p>“DSA is not about memorizing solutions.
+            It’s about training your brain to think better.”</p>
         </div>
         <Footer />
       </div>
