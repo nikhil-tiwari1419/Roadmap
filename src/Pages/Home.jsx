@@ -10,7 +10,7 @@ function Home() {
   const navigate = useNavigate();
   const { theme } = useTheme();
   const [activePopup, setActivePopup] = useState(null)
-  const [activeSection, setActiveSection] = useState('frontend') 
+  const [activeSection, setActiveSection] = useState('frontend')
 
   const roadmapData = [
     {
@@ -57,8 +57,8 @@ function Home() {
 
       <div className={`min-h-screen pb-3 pt-20 px-4 mx-auto transition-colors duration-300
         ${theme === "dark"
-          ? "bg-gray-900 text-gray-100"   
-          : "grid-bg text-gray-800"}`}>   
+          ? "bg-gray-900 text-gray-100"
+          : "grid-bg text-gray-800"}`}>
 
         <h2 className="text-center font-bold text-2xl mb-6">Home</h2>
 
@@ -179,36 +179,22 @@ function Home() {
         )}
 
         {/* MORE TO KNOW */}
-        <div className={`mx-auto max-w-7xl border m-3 rounded p-5 transition-colors
-          ${theme === 'dark' ? 'border-gray-600 bg-gray-800' : 'border-gray-300 bg-white/60'}`}>
+        <div className={`mx-auto max-w-7xl border m-3 rounded p-5 transition-colors  ${theme === 'dark' ? "border-gray-600 bg-gray-800" : "border-gray-300 bg-white/60 "}`}>
           <h3 className='font-bold text-center text-xl mb-4'>More to Know</h3>
-
-          {/* Tab Buttons */}
           <div className='flex gap-4 mb-4 border-b pb-2'>
-            <button
-              onClick={() => setActiveSection('frontend')}  // ❌ was setFrontend with no value — did nothing
-              className={`font-semibold pb-1 transition-all
-                ${activeSection === 'frontend'
-                  ? 'border-b-2 border-blue-500 text-blue-500'
-                  : 'text-gray-500 hover:text-blue-400'}`}
+            <button onClick={() => setActiveSection('frontend')}
+              className={`font-bold pb-1 transition-all ${activeSection === 'frontend' ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500 hover:text-blue-400"}`}
             >
               🖥️ Frontend System Design
             </button>
-            <button
-              onClick={() => setActiveSection('backend')}   // ❌ was setBackend with no value — did nothing
-              className={`font-semibold pb-1 transition-all
-                ${activeSection === 'backend'
-                  ? 'border-b-2 border-blue-500 text-blue-500'
-                  : 'text-gray-500 hover:text-blue-400'}`}
-            >
-              ⚙️ Backend System Design
+            <button onClick={() => setActiveSection('backend')}
+              className={`font-bold pb-1 transition-all ${setActiveSection === 'backend' ? "border-b-2 border-blue-500 text-blue-500 " : "text-gray-500 hover:text-blue-400"}`}>
+              ⚙️BackendSystem Design
             </button>
           </div>
-
-          {/* Conditionally render section */}
           {activeSection === 'frontend' && <Topics />}
           {activeSection === 'backend' && (
-            <p className='text-sm text-gray-500 text-center py-4'>Backend System Design topics coming soon...</p>
+            <p> Backend system will come soon </p>
           )}
         </div>
 

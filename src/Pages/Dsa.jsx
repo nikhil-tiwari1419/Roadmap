@@ -325,9 +325,10 @@ max-w-7xl '>
             </div>
           ))}
         </div>
-        <div className='font-mono px-10 my-5 sm:text-2xl text-lg'>
-          <p>“DSA is not about memorizing solutions.
-            It’s about training your brain to think better.”</p>
+        <div className='font-mono px-10 my-5 sm:text-xl text-center text-lg'>
+          <p>
+            <strong> “DSA is not about memorizing solutions.
+            It’s about training your brain to think better.”</strong></p>
         </div>
         <Footer />
       </div>

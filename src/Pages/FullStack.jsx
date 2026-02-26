@@ -216,7 +216,7 @@ function FullStack() {
           <QnA />
         </div>
 
-        <p className='px-1 rounded text-blue-500 mt-10 font-mono text-center'>
+        <p className='px-1 rounded mt-10 text-xl text-center'>
           <strong>👏“In the beginning, practice more and depend less on AI.
             Build logic with your own hands.
             Once you understand the <span className='underline underline-offset-4 text-red-400'> ‘why’</span>, use AI to speed up the <span className='text-red-400 underline underline-offset-4'>‘how’</span>.”</strong>
