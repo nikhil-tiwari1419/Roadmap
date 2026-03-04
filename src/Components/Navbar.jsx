@@ -54,7 +54,7 @@ function Navbar() {
                 </nav>
 
                 {/* Right — Theme toggle + Hamburger */}
-                <div className='flex items-center gap-3'>  {/* ❌ was item-center — typo */}
+                <div className='flex gap-3'> 
                     <button
                         onClick={toggleTheme}
                         className={`cursor-pointer p-2 rounded-lg transition-colors

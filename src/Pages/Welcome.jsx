@@ -1,13 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { useTheme } from '../Context/Theme';
 
 function Welcome() {
   const direction = useNavigate();
-
+  const { theme } = useTheme();
   return (
     <div
-      className=' bg min-h-screen mx-auto items-center flex-col flex '
+      className={`bg min-h-screen mx-auto items-center flex-col flex  ${theme === "dark"? "bg-gray-800 text-white":"text-black"}`}
     >
       <div className='flex-1 flex items-center justify-center'>
         <div className=' p-10 rounded-lg shadow-lg gap-6 items-center flex flex-col'>
@@ -21,13 +21,13 @@ function Welcome() {
           </p>
           <button
             onClick={() => direction("/Home")}
-            className='cursor-pointer text-lg p-3 border font-bold bg-blue-100 border-none hover:bg-blue-200 rounded hover:text-black text-gray-400'
+            className='cursor-pointer text-lg p-3 border font-bold bg-blue-100 border-none hover:bg-blue-200 rounded hover:text-black text-black'
           >
             Get Started
           </button>
         </div>
       </div>
-      <footer className='bottom-0  text-black text-center w-full text-lg hover:text-blue-500 flex flex-col justify-center'>
+      <footer className='bottom-0  text-center w-full text-lg hover:text-blue-500 flex flex-col justify-center'>
         <a href="http://linkedin.com/in/nikhil-tiwari-53743b339">Connect with me </a>
       </footer>
     </div>
