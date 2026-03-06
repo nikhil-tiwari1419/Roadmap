@@ -5,6 +5,7 @@ import Footer from '../Components/Footer'
 import { useNavigate } from 'react-router-dom'
 import Topics from '../Components/Frontend'
 import { useTheme } from '../Context/Theme'
+import StateCode from '../Components/StateCode'
 
 function Home() {
   const navigate = useNavigate();
@@ -188,7 +189,7 @@ function Home() {
               🖥️ Frontend System Design
             </button>
             <button onClick={() => setActiveSection('backend')}
-              className={`font-bold pb-1 transition-all ${setActiveSection === 'backend' ? "border-b-2 border-blue-500 text-blue-500 " : "text-gray-500 hover:text-blue-400"}`}>
+              className={`font-bold pb-1 transition-all ${activeSection === 'backend' ? "border-b-2 border-blue-500 text-blue-500 " : "text-gray-500 hover:text-blue-400"}`}>
               ⚙️BackendSystem Design
             </button>
           </div>
@@ -197,7 +198,15 @@ function Home() {
             <p> Backend system will come soon </p>
           )}
         </div>
+        <div className={`border rounded mx-auto max-w-7xl ${theme === "dark" ? "bg-gray-700/40":"bg-gray-50/60"}`}>
+          <span className=' items-center flex justify-center font-semibold text-xl px-3 underline underline-offset-4'>Status Code
+          </span>
+          <span className='text-center flex gap-2 text-sm items-center justify-center'>
+            <h1 className='text-red-500 '>* </h1> for backend rest API
+          </span>
 
+          <StateCode />
+        </div>
         <Footer />
       </div>
     </>

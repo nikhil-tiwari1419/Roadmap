@@ -212,7 +212,6 @@ function FullStack() {
         <div
           className='border-t-blue-300 border-t-3 border-l-blue-300 border-l-3 border-b-green-300 border-b-3 border-r-green-300  border-r-3  p-2 h-90 rounded mx-auto max-w-7xl  overflow-auto no-scrollbar'
         >
-
           <QnA />
         </div>
 
